@@ -1,4 +1,26 @@
 
+// creo l'elemeno main da inserire nel DOM
+const mainElement = document.createElement("main");
+console.log(mainElement);
+
+// prendo l'elemento body dal DOM
+const bodyElement = document.querySelector('body');
+
+// colloco l'elemento main dopo l'elemento body
+bodyElement.insertAdjacentElement('afterbegin', mainElement);
+
+// creo l'elemento div che sarà un container da inserire nel main
+const divContainerElement = document.createElement('div');
+divContainerElement.classList.add('container');
+divContainerElement.classList.add('w-50');
+
+mainElement.append(divContainerElement);
+
+
+
+
+
+
 // creo un ciclo che scorra i numeri da 1 a 1000
 for (let i = 1; i <= 1000; i++) {
 
