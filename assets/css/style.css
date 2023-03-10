@@ -1,0 +1,9 @@
+#app_main {
+   background-color: rgb(24, 85, 136);
+}
+
+.box {
+   width: 100%;
+   aspect-ratio: 1/1;
+   background-color: white;
+}
