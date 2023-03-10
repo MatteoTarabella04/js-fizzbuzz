@@ -18,53 +18,8 @@ mainElement.append(divContainerElement);
 
 */
 
-// seleziono l'elemento div con classe row
-//const divElement = document.querySelector('div.row');
 
-
-
-
-/* 
-
-// creo un ciclo che scorra i numeri da 1 a 1000
-for (let i = 1; i <= 101; i ++) {
-
-   // creo il box dove andranno inseriti gli elementi
-   const boxElement = document.createElement('div');
-
-   
-   divElement.innerHTML += `
-   <div class="col">
-   <div class="box d-flex align-items-center justify-content-center">
-   </div>
-   </div>`
-
-   // seleziono le box
-   const boxNumElement = document.querySelector('box')
-   
-   // scorro tra i numeri e individuo i multipli di 3 di 5 e di entrambi
-   switch (true) {
-      default:
-         console.log(i);
-         break;
-
-      case i % 3 == 0 && i % 5 == 0:
-         console.log(i + ' multiplo di 3 e di 5');
-         break;
-
-      case i % 3 == 0:
-         console.log(i + ' multiplo di 3');
-         break;
-
-      case i % 5 == 0:
-         console.log(i + ' multiplo di 5');
-   }
-
-   boxElement.append(boxNumElement);
-} */
-
-
-const containerEl = document.querySelector(".container");
+const containerElement = document.querySelector(".container");
 
 for (let i = 1; i < 101; i++) {
    const boxElement = document.createElement("div");
@@ -82,17 +37,27 @@ for (let i = 1; i < 101; i++) {
 
       case i % 3 == 0 && i % 5 == 0:
          console.log(i + ' multiplo di 3 e di 5');
+
+         boxElement.append('FizzBuzz')
+         boxElement.style.backgroundColor = ("#f14165");
+
          break;
 
       case i % 3 == 0:
          console.log(i + ' multiplo di 3');
+
+         boxElement.append('Fizz')
+         boxElement.style.backgroundColor = ("#48ffaf");
          break;
 
       case i % 5 == 0:
          console.log(i + ' multiplo di 5');
+
+         boxElement.append('Buzz')
+         boxElement.style.backgroundColor = ("#ffda3e");
    }
 
    boxElement.classList.add("box");
-   containerEl.append(boxElement);
+   containerElement.append(boxElement);
 
 }
